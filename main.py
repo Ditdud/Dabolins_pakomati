@@ -67,7 +67,7 @@ class Pakomats:
     def pievienot_sutijumu(self, sutijums):
         self.sutijumi.append(sutijums)
 
-    def aprekina_kopējo_cenu(self):
+    def aprekina_kopejo_cenu(self):
         return sum(s.aprekinat_cenu() for s in self.sutijumi)
 
     def paradit_visus(self):
@@ -91,11 +91,12 @@ def main():
     #pakomats.paradit_visus()
 
     pakomats.paradit_visus()
-    print("Kopējā cena:", pakomats.aprekina_kopējo_cenu(), "€")
+    print("Kopējā cena:", pakomats.aprekina_kopejo_cenu(), "€")
     print("Vai s1 ir lētāks par s2?", s1 < s2)
     print("Trauslie sūtījumi:")
     for t in pakomats.filtre_trauslos():
-        print(t, "Cena:", t.aprekinat_cenu(), "€")
+        print(t)
 
 if __name__ == "__main__":
+
     main()
