@@ -78,24 +78,32 @@ class Pakomats:
         return [s for s in self.sutijumi if isinstance(s, TrauslsSutijums)]
 
 def main():
+    #Izveidot pakomatu
     pakomats = Pakomats()
-
+    
+    # Izveidot sūtijumus
     s1 = ParastsSutijums("Jānis Bērziņš", 2.5, 'M')
     s2 = TrauslsSutijums("Anna Kalniņa", 1.0, 'S', 2.0)
     s3 = VertigsSutijums("Pēteris Ozols", 0.8, 'L', 300)
-
+    
+    #Pievienot sūtijumus pakomātam
     pakomats.pievienot_sutijumu(s1)
     pakomats.pievienot_sutijumu(s2)
     pakomats.pievienot_sutijumu(s3)
-
-    #pakomats.paradit_visus()
-
+    
+    #Izvadīt sūtijumus
     pakomats.paradit_visus()
-    print("Kopējā cena:", pakomats.aprekina_kopejo_cenu(), "€")
+    
+    #Izvadīt sūtijuma kopējo cenu
+    print("Kopējā cena:", pakomats.aprekina_kopējo_cenu(), "€")
+    
+    #Salīdzināt sūtijumus
     print("Vai s1 ir lētāks par s2?", s1 < s2)
+    
+    #Filtrēt trauslos sūtijumus
     print("Trauslie sūtījumi:")
     for t in pakomats.filtre_trauslos():
-        print(t)
+    print(t, "Cena:", t.aprekinat_cenu(), "€")
 
 if __name__ == "__main__":
     main()
