@@ -95,7 +95,7 @@ def main():
     pakomats.paradit_visus()
     
     #Izvadīt sūtijuma kopējo cenu
-    print("Kopējā cena:", pakomats.aprekina_kopējo_cenu(), "€")
+    print("Kopējā cena:", pakomats.aprekina_kopejo_cenu(), "€")
     
     #Salīdzināt sūtijumus
     print("Vai s1 ir lētāks par s2?", s1 < s2)
@@ -103,7 +103,8 @@ def main():
     #Filtrēt trauslos sūtijumus
     print("Trauslie sūtījumi:")
     for t in pakomats.filtre_trauslos():
-    print(t, "Cena:", t.aprekinat_cenu(), "€")
+    print(t)
 
 if __name__ == "__main__":
     main()
+
