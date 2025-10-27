@@ -51,5 +51,5 @@ Adresāts: Anna Kalniņa, svars: 1.0 kg, izmērs: S, cena: 4.0 € Cena: 4.0 €
 ```
 
 ## Prasības
-Python 3.8 vai jaunāka versija
-Nav ārēju bibliotēku atkarību
+- Python 3.8 vai jaunāka versija
+- Nav ārēju bibliotēku atkarību
